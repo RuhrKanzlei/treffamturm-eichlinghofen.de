@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="church-outline"
+   viewBox="0 0 1200 120"
+   preserveAspectRatio="xMidYMax meet"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="church-outline.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="12.859915"
+     inkscape:cx="649.07115"
+     inkscape:cy="58.126355"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <defs
+     id="defs3">
+    <!-- Пастель для «тела» церкви -->
+    <linearGradient
+       id="bgGradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#a8e6cf;stop-opacity:1"
+         id="stop1" />
+      <stop
+         offset="50%"
+         style="stop-color:#dcedc1;stop-opacity:1"
+         id="stop2" />
+      <stop
+         offset="100%"
+         style="stop-color:#ffd3b6;stop-opacity:1"
+         id="stop3" />
+    </linearGradient>
+  </defs>
+  <!-- Контур церкви -->
+  <path
+     d="M 0 120     L 0 85     L 80 85     L 80 45     L 95 45     L 95 30     L 100 30     L 105 15     L 110 30     L 115 30     L 115 45     L 130 45     L 130 85     L 250 85     L 250 60     L 380 45     L 510 60     L 510 85     L 580 85     L 580 65     L 595 65     L 595 55     L 640 30     L 685 55     L 685 65     L 700 65     L 700 85     L 750 85     L 750 75     L 820 70     L 890 75     L 890 85     L 1200 85     L 1200 120     Z"
+     fill="url(#bgGradient)"
+     stroke="#2e7d32"
+     stroke-width="3"
+     stroke-linejoin="round"
+     stroke-dasharray="0 0 0 1200"
+     id="path3" />
+  <path
+     d="m 634.99361,57.129986 v -10.3532 q 3.18747,-8.627656 4.78121,-8.627656 1.59374,0 4.78118,8.627656 v 10.3532 z"
+     fill="#a8e6cf"
+     stroke="#2e7d32"
+     stroke-width="0.786612"
+     id="path1-8-2" />
+  <!-- Детали -->
+  <circle
+     cx="640"
+     cy="76"
+     r="12"
+     fill="#a8e6cf"
+     stroke="#2e7d32"
+     stroke-width="2"
+     id="circle3" />
+  <circle
+     cx="640"
+     cy="76"
+     r="8"
+     fill="none"
+     stroke="#2e7d32"
+     stroke-width="1.5"
+     id="circle4" />
+  <path
+     d="m 625.85994,113.24022 v -10.3532 q 3.18747,-8.627662 4.78121,-8.627662 1.59374,0 4.78118,8.627662 v 10.3532 z"
+     fill="#a8e6cf"
+     stroke="#2e7d32"
+     stroke-width="0.786612"
+     id="path1" />
+  <path
+     d="m 646.23628,113.20978 v -10.3532 q 3.18747,-8.627656 4.78121,-8.627656 1.59374,0 4.78118,8.627656 v 10.3532 z"
+     fill="#a8e6cf"
+     stroke="#2e7d32"
+     stroke-width="0.786612"
+     id="path1-8" />
+</svg>
