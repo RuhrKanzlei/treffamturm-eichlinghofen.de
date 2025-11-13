@@ -6,8 +6,13 @@
   <title>Förderverein Evangelische Kirche Eichlinghofen St. Margareta e.V.</title>
   <style>
 	:root{
-	  --g1:#375E57; --g2:#375E57; --g3:#058743	;
+	  --g1:#375E57; --g2:#375E57; --g3:#058743;
+	  --size: clamp(320px, 60vmin, 680px);
+	  --radius: clamp(90px, 26vmin, 260px);
+	  --speed: 20s;
+	  --count: 8;
 	}
+	
 	*{margin:0; padding:0; box-sizing:border-box;}
 	body{
 	  font-family: Verdana;
@@ -16,11 +21,10 @@
 	  min-height:100vh;
 	}
 
-	/* Лого с обтеканием текста */
 	.site-logo{
-	float:left;            /* запускает обтекание текста справа и снизу */
-	display:block;         /* предсказуемое поведение размеров/отступов */
-	margin: 25px 25px 15px 25px; /* сверху, справа, снизу, слева */
+	float:left;
+	display:block;
+	margin: 25px 25px 15px 25px;
 	height:auto;
 	width:auto;
 	}
@@ -30,7 +34,7 @@
 	  padding: 20px 50px 0;
 	}
 
-	nav{ /* фон прозрачный — градиент даёт .hero */
+	nav{
 	  background: transparent;
 	  position: relative;
 	  z-index: 1;
@@ -42,15 +46,14 @@
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
-	  padding: 0 16px 20px; /* немного внутреннего отступа для узких экранов */
+	  padding: 0 16px 20px;
 	}
 
-	/* Перенос пунктов меню на новые строки при нехватке ширины */
 	.nav-links{
 	  display: flex;
-	  flex-wrap: wrap;			/* позволяет переноситься по строкам */
-	  justify-content: center;	/* центрирует каждую строку */
-	  gap: 12px 40px;			/* сначала вертикальный, затем горизонтальный отступ */
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  gap: 12px 40px;
 	  list-style: none;
 	}
 	.nav-links a{
@@ -60,7 +63,7 @@
 	  font-weight:500;
 	  transition:opacity .3s;
 	  text-shadow:1px 1px 2px rgba(0,0,0,.3);
-	  white-space: nowrap;		/* сам текст ссылки не ломается внутри */
+	  white-space: nowrap;
 	}
 	.nav-links a:hover{opacity:.8;}
 
@@ -70,12 +73,64 @@
 	h1{color:#333; margin-bottom:20px;}
 	p{color:#000000; line-height:1.6;}
 
-	/* Небольшая адаптация на очень маленьких экранах */
 	@media (max-width: 640px){
 	  .nav-links{ gap: 8px 24px; }
 	  .nav-links a{ font-size: 15px; }
 	  .content{ padding: 0 20px; }
 	}
+	
+	.collage-wrap {
+	  width: 100%;
+	  height: clamp(640px, 12vmin, 640px);
+	  overflow: hidden;
+	  margin: 60px auto;
+	  position: relative;
+	}
+
+	.wheel {
+	  display: flex;
+	  align-items: center;
+	  height: 100%;
+	  width: max-content;
+	  animation: moveLeft linear infinite var(--speed,20s);
+	}
+
+	@keyframes moveLeft {
+	  from {
+		transform: translateX(0);
+	  }
+	  to {
+		transform: translateX(-50%);
+	  }
+	}
+
+	.photo {
+	  flex: 0 0 clamp(480px, 12vmin, 640px);
+	  height: clamp(480px, 12vmin, 640px);
+	  border-radius: 12px;
+	  overflow: hidden;
+	  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+	  background: #eee;
+	  margin: 0 8px;
+	  display: grid;
+	  place-items: center;
+	}
+
+	.photo img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  display: block;
+	}
+
+	.caption {
+	  text-align: center;
+	  font-size: 13px;
+	  color: #222;
+	  opacity: 0.8;
+	  margin-top: 6px;
+	}
+
   </style>
 </head>
 <body>
@@ -99,6 +154,17 @@
   <div class="content">
 	<h1>Willkommen bei unserem Treff am Turm!</h1>
 	<p>Hier entsteht die Web-Präsenz vom Förderverein Evangelische Kirche Eichlinghofen St. Margareta e.V.</p>
+	
+	<div class="collage-wrap">
+	  <div class="wheel">
+		<!-- Erste Serie -->
+		<div class="photo"><img src="./Fotos/158159ff2ad57ec2b033e7093d21551864746ceedafeac5524f0f8f934eb70b5.jpg" alt=""></div>
+		<div class="photo"><img src="./Fotos/dac8caa807ae9aadc52a641bfeb2db3efbd72bdbb8154e8d55d458f1bcbe50b3.jpg" alt=""></div>
+		<div class="photo"><img src="./Fotos/df126ae5a8095a08adca1cbe79c3c70c76b68364de18cf9d5178fda906cc5540.jpg" alt=""></div>
+		<div class="photo"><img src="./Fotos/e3ffd7215649d50ed651793ddac76190ead15cc31bfa4af73608e4ba86a847ed.jpg" alt=""></div>
+	  </div>
+	</div>
+	
   </div>
 </body>
 </html>
