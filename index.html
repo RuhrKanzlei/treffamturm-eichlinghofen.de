@@ -16,6 +16,15 @@
 	  min-height:100vh;
 	}
 
+	/* Лого с обтеканием текста */
+	.site-logo{
+	float:left;            /* запускает обтекание текста справа и снизу */
+	display:block;         /* предсказуемое поведение размеров/отступов */
+	margin: 25px 25px 15px 25px; /* сверху, справа, снизу, слева */
+	height:auto;
+	width:auto;
+	}
+
 	.hero{
 	  background: linear-gradient(to right, var(--g1) 0%, var(--g2) 50%, var(--g3) 100%);
 	  padding: 20px 50px 0;
@@ -85,11 +94,11 @@
 	</nav>
   </header>
 
+  <img src="Logo.png" alt="Logo Förderverein St. Margareta" class="site-logo">
+
   <div class="content">
 	<h1>Willkommen bei unserem Treff am Turm!</h1>
 	<p>Hier entsteht die Web-Präsenz vom Förderverein Evangelische Kirche Eichlinghofen St. Margareta e.V.</p>
   </div>
 </body>
 </html>
-
-
