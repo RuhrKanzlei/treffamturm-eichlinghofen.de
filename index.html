@@ -1,187 +1,263 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Förderverein Evangelische Kirche Eichlinghofen St. Margareta e.V.</title>
-  <style>
-	:root{
-	  --g1:#375E57; --g2:#375E57; --g3:#058743;
-	  --size: clamp(320px, 60vmin, 680px);
-	  --radius: clamp(90px, 26vmin, 260px);
-	  --speed: 55s;
-	  --count: 8;
-	}
-	
-	*{margin:0; padding:0; box-sizing:border-box;}
-	body{
-	  font-family: Verdana;
-	  font-size: 19px;
-	  background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 50%, #ffd3b6 100%);
-	  min-height:100vh;
-	}
-
-	.site-logo{
-	float:left;
-	display:block;
-	margin: 25px 25px 15px 25px;
-	height:auto;
-	width:auto;
-	}
-
-	.hero{
-	  background: linear-gradient(to right, var(--g1) 0%, var(--g2) 50%, var(--g3) 100%);
-	  padding: 20px 50px 0;
-	}
-
-	nav{
-	  background: transparent;
-	  position: relative;
-	  z-index: 1;
-	}
-
-	.nav-container{
-	  max-width: 1200px;
-	  margin: 0 auto;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  padding: 0 16px 20px;
-	}
-
-	.nav-links{
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-content: center;
-	  gap: 12px 40px;
-	  list-style: none;
-	}
-	.nav-links a{
-	  color:#fff;
-	  text-decoration:none;
-	  font-size:16px;
-	  font-weight:500;
-	  transition:opacity .3s;
-	  text-shadow:1px 1px 2px rgba(0,0,0,.3);
-	  white-space: nowrap;
-	}
-	.nav-links a:hover{opacity:.8;}
-
-	.church-outline{display:block; width:100%; height:120px;}
-
-	.content{max-width:1200px; margin:50px auto; padding:0 50px;}
-	h1{color:#333; margin-bottom:20px;}
-	p{color:#000000; line-height:1.6;}
-
-	@media (max-width: 640px){
-	  .nav-links{ gap: 8px 24px; }
-	  .nav-links a{ font-size: 15px; }
-	  .content{ padding: 0 20px; }
-	}
-	
-	.collage-wrap {
-	  width: 100%;
-	  height: clamp(640px, 12vmin, 640px);
-	  overflow: hidden;
-	  margin: 60px auto;
-	  position: relative;
-	}
-
-	.wheel {
-	  display: flex;
-	  align-items: center;
-	  height: 100%;
-	  width: max-content;
-	  animation: moveLeft linear infinite var(--speed);
-	}
-
-	@keyframes moveLeft {
-	  from {
-		transform: translateX(0);
-	  }
-	  to {
-		transform: translateX(-50%);
-	  }
-	}
-
-	.photo {
-	  flex: 0 0 clamp(480px, 12vmin, 640px);
-	  height: clamp(480px, 12vmin, 640px);
-	  border-radius: 12px;
-	  overflow: hidden;
-	  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-	  background: #eee;
-	  margin: 0 8px;
-	  display: grid;
-	  place-items: center;
-	}
-
-	.photo img {
-	  width: 100%;
-	  height: 100%;
-	  object-fit: cover;
-	  display: block;
-	}
-
-	.caption {
-	  text-align: center;
-	  font-size: 13px;
-	  color: #222;
-	  opacity: 0.8;
-	  margin-top: 6px;
-	}
-
-  </style>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Förderverein Evangelische Kirche Eichlinghofen St. Margareta e.V.</title>
+	<link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-  <header class="hero">
-	<nav>
-	  <div class="nav-container">
-		<ul class="nav-links">
-		  <li><a href="#home">Startseite</a></li>
-		  <li><a href="#about">Über uns</a></li>
-		  <li><a href="#events">Veranstaltungen</a></li>
-		  <li><a href="#donations">Spenden</a></li>
-		  <li><a href="./Impressum.html">Impressum</a></li>
-		  <li><a href="./DSE.html">Datenschutzerklärung</a></li>
-		</ul>
-	  </div>
-	</nav>
-  </header>
+	<header class="hero">
+		<nav>
+			<div class="nav-container">
+				<ul class="nav-links">
+					<li><a href="./index.html">Startseite</a></li>
+					<li><a href="./index.html#about">Über uns</a></li>
+					<li><a href="./index.html#events">Veranstaltungen</a></li>
+					<li><a href="./index.html#donations">Spenden</a></li>
+					<li><a href="./docs.html">Unterlagen</a></li>
+					<li><a href="./Impressum.html">Impressum</a></li>
+					<li><a href="./DSE.html">Datenschutzerklärung</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
 
-  <img src="Logo.png" alt="Logo Förderverein St. Margareta" class="site-logo">
+	<img src="Logo.png" alt="Logo Förderverein St. Margareta" class="site-logo">
 
-  <div class="content">
+	<div class="content">
 
-	<center>
+		<h1>Herzlich willkommen beim Förderverein St.&nbsp;Margareta!</h1>
+		<p>Willkommen auf der Website des <b></b>Fördervereins Evangelische Kirche Eichlinghofen St.&nbsp;Margareta e.V</b>.
+		</p>
+		<p>Die St.-Margareta-Kirche und das Haus der Begegnung sind das <b>Herz unseres Dorfes Eichlinghofen</b>.</p>
+		<p>Seit	Jahrzehnten ist dieser Ort ein Treffpunkt für Generationen – unabhängig von Religion, Alter oder Herkunft. Hier finden Hochzeiten, Konzerte, Festlichkeiten und kulturelle Veranstaltungen statt. Hier entsteht	Zusammenhalt.</p>
+		<p>Doch die St.-Margareta-Kirche und das Haus der Begegnung stehen vor existenziellen Herausforderungen. Die
+			Evangelische Kirchengemeinde Dortmund-Südwest kann die Kosten für die Unterhaltung aller ihrer
+			Kirchenstandorte auf Dauer nicht mehr tragen.</p>
+		<p><b></b>Deshalb haben wir den Förderverein gegründet – um unseren Dorfmittelpunkt zu bewahren.</b></p>
+		<h2>Was wir tun</h2>
+		<p>Unser Förderverein übernimmt die Verantwortung für den Erhalt und die Nutzung der St.-Margareta-Kirche, des
+			Hauses der Begegnung und des Kirchplatzes als lebendigen Ort für:</p>
+		<li><b>Kulturelle Veranstaltungen</b> (Konzerte, Lesungen, Ausstellungen)</li>
+		<li><b>Soziale Aktivitäten</b> (Treffen, Feierlichkeiten, Gemeinschaftserlebnisse)</li>
+		<li><b>Kirchliche Angebote</b> (Gottesdienste, Andachten, Trauungen)</li>
+		<li><b>Dorfgemeinschaft</b> (Nachbarschaft, Begegnungen, Zusammenhalt)</li>
+		<h2>Werde Teil unserer Mission <br>
+			<center>Du möchtest Eichlinghofen bewahren?</center>
+		</h2>
+		<p>Mit nur <b>36 €</b> pro Jahr kannst du Mitglied werden und unseren Verein unterstützen. Wenn du möchtest, kannst du zusätzlich mit einem freiwilligen Förderbeitrag von <b>120 €</b> pro Jahr (steuerlich absetzbar) einen noch größeren Beitrag leisten.</p>
+		<li>Jetzt beitreten: <a href="./docs/Beitrittserklärung.pdf">Beitrittserklärung</a></li>
+		
+		<hr><h1 id="about">Über üns</h1>
 
-	<h1>Willkommen bei unserem Treff am Turm!</h1>
-	<p>Hier entsteht die Web-Präsenz vom Förderverein Evangelische Kirche Eichlinghofen St. Margareta e.V.</p>
-	
-	<p><br /><iframe
-		src="./2025-12-Einladung_zum_Adventssingen_25.pdf#zoom=page-width"
-		width="60%"
-		height="966px"
-		style="border:none;">
-	</iframe></p>
+		<h2>Wer wir sind</h2>
+		<p>Der <b>Förderverein Evangelische Kirche Eichlinghofen St. Margareta e.V.</b> ist ein 2025 gegründeter, gemeinnütziger Verein mit Sitz in Dortmund-Eichlinghofen. Wir sind eine Gruppe von Bürgern, die sich leidenschaftlich für den Erhalt und die Belebung der St.-Margareta-Kirche und des Hauses der Begegnung einsetzen.</p>
 
-	</center>
-	
-	<div class="collage-wrap">
-	  <div class="wheel">
-		<!-- Erste Serie -->
-		<div class="photo"><img src="./Fotos/158159ff2ad57ec2b033e7093d21551864746ceedafeac5524f0f8f934eb70b5.jpg" alt=""></div>
-		<div class="photo"><img src="./Fotos/dac8caa807ae9aadc52a641bfeb2db3efbd72bdbb8154e8d55d458f1bcbe50b3.jpg" alt=""></div>
-		<div class="photo"><img src="./Fotos/df126ae5a8095a08adca1cbe79c3c70c76b68364de18cf9d5178fda906cc5540.jpg" alt=""></div>
-		<div class="photo"><img src="./Fotos/e3ffd7215649d50ed651793ddac76190ead15cc31bfa4af73608e4ba86a847ed.jpg" alt=""></div>
-		<!-- Dublierte Serie -->
-		<div class="photo"><img src="./Fotos/158159ff2ad57ec2b033e7093d21551864746ceedafeac5524f0f8f934eb70b5.jpg" alt=""></div>
-		<div class="photo"><img src="./Fotos/dac8caa807ae9aadc52a641bfeb2db3efbd72bdbb8154e8d55d458f1bcbe50b3.jpg" alt=""></div>
-		<div class="photo"><img src="./Fotos/df126ae5a8095a08adca1cbe79c3c70c76b68364de18cf9d5178fda906cc5540.jpg" alt=""></div>
-		<div class="photo"><img src="./Fotos/e3ffd7215649d50ed651793ddac76190ead15cc31bfa4af73608e4ba86a847ed.jpg" alt=""></div>
-	  </div>
+		<h2>Unsere Geschichte</h2>
+		<p>Der Verein entstand aus der Initiative der <b>TaT-Gruppe (Treffpunkt am Turm)</b>, einer Gruppe von Bürgern, die sich zum Ziel gesetzt haben, das Kirchenensemble als zentralen Ort für Begegnungen, kulturelle Veranstaltungen und das Dorfleben zu erhalten und weiterzuentwickeln.</p>
+		<p>Zuvor war unter dem Namen „Neue Energien Eichlinghofen e.V." seit 1998 erfolgreich eine Solaranlage auf dem Dach des Hauses der Begegnung betrieben worden. Mit der Gründung des Fördervereins im Jahr 2025 haben wir unseren Fokus neu ausgerichtet – um unseren Dorf nun ganzheitlich zu unterstützen.</p>
+
+		<h2>Unsere Ziele</h2>
+		Der Förderverein verfolgt folgende Ziele:<ol>
+		<li>Erhalt und Unterhaltung der Evangelischen St.-Margareta-Kirche, des Hauses der Begegnung und des Kirchplatzes</li>
+		<li>Kulturelle Belebung durch Konzerte, Lesungen, Ausstellungen und andere Veranstaltungen</li>
+		<li>Soziales Engagement für Jugend- und Familienarbeit, Nachbarschaftshilfe und Gemeinschaftserlebnisse</li>
+		<li>Unabhängige Nutzung des Kirchenensembles als Treffpunkt für alle Generationen, unabhängig von Religionszugehörigkeit</li>
+		<li>Nachhaltige Energieversorgung durch Betrieb und Pflege der Solaranlage</li>
+		</ol>
+		
+		<h2>Unsere Werte</h2>
+		<li><b>Zusammenhalt</b>: Wir glauben an die Kraft von Gemeinschaft und nachbarschaftlichem Engagement.</li>
+		<li><b>Offenheit</b>: Die St.-Margareta-Kirche und das Haus der Begegnung gehören allen – unabhängig von Religion, Kultur oder Herkunft</li>
+		<li><b>Nachhaltigkeit</b>: Wir handeln verantwortungsvoll für die Zukunft unseres Dorfes und der Umwelt</li>
+		<li><b>Transparenz</b>: Alle Mitglieder können sich an Entscheidungen beteiligen; unsere Arbeit ist offen und nachvollziehbar</li>
+
+		<h2>Unser Vorstand</h2>
+		<li>1. Vorsitzender: Manfred Stinshoff</li>
+		<li>2. Vorsitzender: Sven Drevermann</li>
+		<li>Schriftführer: Ulf Haumann</li>
+		<li>Kassenwart: Klaus Wedewart</li>
+		<li>Veranstaltungswart: Sven Drevermann</li>
+
+
+
+		<hr><h1 id="events">Veranstaltungen</h1>
+
+		<h2>Gemeinsam Eichlinghofen erleben</h2>
+		<p>Die St.-Margareta-Kirche und das Haus der Begegnung sind mehr als nur Gebäude – sie sind <b>Orte der Begegnung, Kultur und Gemeinschaft</b>. Hier finden regelmäßig Veranstaltungen statt, bei denen Dorfbewohner und Gäste zusammenkommen.</p>
+		
+		<h2>Kommende Veranstaltungen</h2>
+		<h3>Neujahrsempfang 2026</h3>
+		<p><b>Wann</b>: Januar/Februar 2026 (Termin wird noch bekannt gegeben)</p>
+		<p><b>Wo</b>: Haus der Begegnung</p>
+		<p>Wir laden Mitglieder, Freunde und Interessierte zu einem gemütlichen Neujahrsempfang ein. Hier können Sie andere Mitglieder kennenlernen, sich über die Arbeit des Vereins austauschen und neue Ideen einbringen.</p>
+		<b>Eintritt</b>: Kostenlos
+
+		<h2>Konzerte und kulturelle Veranstaltungen</h2>
+		<h3>Frühling/Sommer 2026</h3>
+		<p>Wir planen eine Serie von Konzerten und kulturellen Veranstaltungen in der St.-Margareta-Kirche. Die genauen Termine und Künstler werden in Kürze bekannt gegeben.</p>
+		<p>Folgen Sie uns auf Social Media, um keine Veranstaltung zu verpassen!</p>
+
+		<h3>Sommerfest 2026</h3>
+		<b>Wann</b>: Juni/Juli 2026 (Termin wird noch bekannt gegeben)
+		<b>Wo</b>: Kirchplatz und Haus der Begegnung
+		Unser Highlight des Jahres: Ein großes Sommerfest mit Musik, kulinarischen Köstlichkeiten, Spielen für Kinder und Präsentationen lokaler Unternehmen. Ein Tag für die ganze Familie zum Feiern und Zusammensein!
+		<b>Eintritt</b>: Kostenlos (Getränke und Speisen gegen Gebühr)
+
+		<h2>Newsletter</h2>
+		<p>Damit du keine Veranstaltung verpasst, melde dich zu unserem <b>kostenlosen Newsletter</b> an:</p> <center><ul style="list-style-type: none; padding-left: 0;"><li><a href="mailto:info@treffamturm-eichlinghofen.de?subject=Anmeldung%20Newsletter%20Treff%20an%20Turm&body=Hallo,%0A%0Aich%20m%C3%B6chte%20mich%20zum%20kostenlosen%20Newsletter%20Treff%20am%20Turm%20Eichlinghofen%20anmelden!%0A%0A">Hier anmelden<br> (Newsletter abbonieren)</a></li></ul></center>
+
+		<p>Du erhältst regelmäßig Informationen über:</p>
+		<ul>
+			<li>Kommende Veranstaltungen</li>
+			<li>Vereinsnachrichten</li>
+			<li>Besondere Aktionen und Sonderaktionen</li>
+
+		<hr><h1 id="donations">Spenden</h1>
+			<p><b>Unterstütze den Erhalt unseres Dorfzentrums</b></p>
+			<p>Die Finanzierung des Fördervereins beruht auf <b>Mitgliedsbeiträgen</b> und <b>freiwilligen Spenden</b>. Jeder Euro hilft, die St.-Margareta-Kirche, das Haus der Begegnung und den Kirchplatz zu erhalten und zu beleben.</p>
+			<h2>Wofür brauchen wir Spenden?</h2>
+			<p>Die Mittel werden verwendet für:</p>
+			<ul>
+				<li><b>Instandhaltung und Reparaturen</b> an der Kirche und dem Haus der Begegnung</li>
+				<li><b>Heizung, Strom und Versicherungen</b> für die Gebäude</li>
+				<li><b>Veranstaltungen und kulturelle Programme</b> (Konzerte, Lesungen, etc.)</li>
+				<li><b>Renovierung und Modernisierung</b> der Räume</li>
+				<li><b>Jugend- und Familienarbeit</b> sowie soziale Aktivitäten</li>
+			</ul>
+			<h2>Wie kannst du spenden?</h2>
+			<b>Mitgliedschaft + freiwilliger Förderbeitrag</b>
+			<ul>
+				<li><b>Mitgliedsbeitrag</b>: 36,00 € pro Jahr (3,00 € monatlich)</li>
+				<li><b>Freiwilliger Förderbeitrag</b>: 120,00 € pro Jahr (10,00 € monatlich) – <b>steuerlich absetzbar!</b></li>
+			<p>Beide Beträge zusammen = 156,00 € pro Jahr für maximale Unterstützung.</p>
+			<center><ul style="list-style-type: none; padding-left: 0;"><li><a href="./docs/Beitrittserklärung.pdf">Zur Beitrittserklärung</a></li></ul></center>
+			</ul>
+			<hr><br><h2>Einzelspenden</h2>
+			<p>Du möchtest eine einmalige Spende leisten? Gerne!</p>
+			<p><b>Spendenkonto:</b><br>
+				Förderverein Evangelische Kirche Eichlinghofen St. Margareta e.V.<br>
+				IBAN: DE89430609671359732800<br>
+				BIC: GENODEM1GLS<br>
+				<b>Verwendungszweck</b>: „Spende St. Margareta"
+			</p>
+			<h2>Dauerauftrag</h2>
+			<p>Mit einem regelmäßigen Dauerauftrag hilfst du uns besonders bei der langfristigen Planung:</p>
+			<p>Beispiele:</p>
+			<ul>
+				<li>10,00 € monatlich = 120,00 € pro Jahr</li>
+				<li>25,00 € monatlich = 300,00 € pro Jahr</li>
+				<li>50,00 € monatlich = 600,00 € pro Jahr</li>
+			</ul>
+
+			<h2>SEPA-Lastschriftverfahren</h2>
+				<p>Bequem und sicher spenden per Lastschrift. Mit einem SEPA-Lastschriftmandat kannst du deine Spenden und Mitgliedsbeiträge automatisch abbuchen lassen – bequem, sicher und ohne dass du an Überweisungen denken musst.</p>
+
+				<h3>Vorteile des SEPA-Lastschriftverfahrens:</h3>
+				<ul>
+					<li><b>Bequem</b>: Du musst nicht mehr an jede Überweisung denken</li>
+					<li><b>Flexibel</b>: Du kannst das Mandat jederzeit widerrufen</li>
+					<li><b>Sicher</b>: SEPA-Lastschriften können innerhalb von 8 Wochen zurückgebucht werden</li>
+					<li><b>Transparent</b>: Du behältst volle Kontrolle über dein Konto</li>
+					<li><b>Zuverlässig</b>: Deine Unterstützung kommt regelmäßig an</li>
+				</ul>
+
+				<h3>SEPA-Lastschriftmandat für Mitgliedsbeiträge</h3>
+				<p>Als Vereinsmitglied erteilst du uns ein SEPA-Lastschriftmandat, damit wir deinen Jahresbeitrag von <b>36,00 €</b> (bzw. ermäßigt <i>[Betrag eintragen]</i>) automatisch im Februar jeden Jahres einziehen können.</p>
+				<p>Das Mandat wird gemeinsam mit der Beitrittserklärung ausgefüllt.</p>
+				<center><ul style="list-style-type: none; padding-left: 0;"><li><a href="./docs/Beitrittserklärung.pdf">Zur Beitrittserklärung</a></li></ul></center>
+
+				<hr><br><h3>SEPA-Lastschriftmandat für freiwillige Förderbeiträge (Spenden)</h3>
+				<p>Du möchtest den Verein zusätzlich mit einem freiwilligen Förderbeitrag unterstützen? Mit einem separaten SEPA-Mandat können wir folgende Beträge automatisch einziehen:</p>
+
+				<h4>Monatliche Förderbeiträge:</h4>
+				<ul>
+					<li>10,00 € monatlich = 120,00 € jährlich (empfohlener Betrag)</li>
+					<li>25,00 € monatlich = 300,00 € jährlich</li>
+					<li>50,00 € monatlich = 600,00 € jährlich</li>
+					<li>Oder ein individueller Betrag deiner Wahl</li>
+				</ul>
+
+				<h4>Jährliche Förderbeiträge:</h4>
+				<ul>
+					<li>Einmaliger Einzug im Februar jeden Jahres</li>
+					<li>Mindestbetrag: 50,00 €</li>
+					<li>Oder ein individueller Betrag deiner Wahl</li>
+				</ul>
+
+				<p><b>Wichtig:</b> Für freiwillige Förderbeiträge erhältst du eine Spendenbescheinigung, die du steuerlich geltend machen kannst!</p><center><ul style="list-style-type: none; padding-left: 0;"><li><a href="./docs/SEPA-Mandat-Foerderbeitraege.pdf">SEPA-Mandat für Förderbeiträge herunterladen</a></p></li></ul></center>
+				<h3>Widerruf und Änderung</h3>
+				<p>Du kannst dein SEPA-Lastschriftmandat jederzeit ohne Angabe von Gründen widerrufen oder ändern. Eine formlose E-Mail oder ein Brief an den Vorstand genügt.</p>
+				<p><b>Kontakt für SEPA-Mandate:</b><br>
+				E-Mail: <a href="mailto:kassenwart@treffamturm-eichlinghofen.de">kassenwart@treffamturm-eichlinghofen.de</a></p>
+
+			<h2>Spendenbescheinigung</h2>
+				<p>Der Förderverein ist als <b>gemeinnützig anerkannt</b>. Das bedeutet:</p>
+				<ul style="list-style: '✓  ' inside; ">
+					<li>Alle Spenden sind steuerlich absetzbar bis zu <b>20%</b> deiner Einkünfte</li>
+					<li>Du erhältst automatisch eine <b>Spendenbescheinigung</b> pro Jahr</li>
+					<li>Diese kannst du in deiner <b>Steuererklärung</b> geltend machen und <b>Steuern sparen</b></li>
+				</ul>
+
+				<h2>Corporate Social Responsibility für Unternehmen</h2>
+				<p>Du bist Unternehmer/in oder Geschäftsführer/in? Unterstütze den Förderverein als förderndes Mitglied:</p>
+				<ul>
+					<li>Mitgliedsbeitrag: 600,00 € pro Jahr (50,00 € monatlich)</li>
+					<li>Präsentation beim Sommerfest 2026 auf dem Kirchplatz</li>
+					<li>Spendenbescheinigung für Steuererklärung</li>
+					<li>Öffentliche Anerkennung als Unterstützer der Dorfgemeinschaft</li>
+					<li>Nutzungsmöglichkeiten der Räume für Veranstaltungen (nach Absprache)</li>
+				</ul>
+				<center><ul style="list-style-type: none; padding-left: 0;"><li><a href="mailto:info@treffamturm-eichlinghofen.de?subject=Anschreiben%20Unternehmen&body=Hallo,%0A%0AUnsere%20Unternehmen%20möchte%20förderndes%20Mitglied%20werden!%0A%0A">Anschreiben für Unternehmen anfordern</a></li></ul></center>
+
+				<hr><br><h2>Häufig gestellte Fragen (FAQ)</h2>
+				<dl>
+					<dt>F: Wie wird meine Spende verwendet?</dt>
+					<dd>A: Der Förderverein legt transparent dar, wie alle Einnahmen verwendet werden. Der Jahresbericht wird jährlich veröffentlicht und allen Mitgliedern zur Verfügung gestellt.</dd>
+
+					<dt>F: Kann ich eine Spende zweckgebunden für ein bestimmtes Projekt tätigen?</dt>
+					<dd>A: Ja! Kontaktiere uns und teile mit, wofür du spenden möchtest (z.B. Dachreparatur, Kircheninnenausstattung). Gerne werden solche Projekte realisiert.</dd>
+
+					<dt>F: Bekomme ich automatisch eine Spendenbescheinigung?</dt>
+					<dd>A: Ja, ab einer Spende von 5,00 € erhältst du am Jahresende automatisch eine Sammelbestätigung. Für größere Spenden stellen wir sofort eine Bescheinigung aus.</dd>
+
+					<dt>F: Kann ich anonym spenden?</dt>
+					<dd>A: Ja, gerne. Kontaktiere uns einfach und teile mit, dass du anonym spenden möchtest.</dd>
+				</dl>
+
+				<h2>Kontakt</h2>
+				<p>Hast du Fragen zu Spenden oder möchtest dich anders engagieren? Wir freuen uns auf deine Nachricht!</p>
+				<center><ul style="list-style-type: none; padding-left: 0;"><li><a href="mailto:info@treffamturm-eichlinghofen.de?subject=Frage%20zur%20Spende&body=Hallo,%0A%0Aich%20habe%20eine%20Frage%20zur%20Spende.%0A%0A">Kontakt aufnehmen</a></li></ul></center>
+
+
+
+		<div class="collage-wrap">
+			<div class="wheel">
+				<!-- Erste Serie -->
+				<div class="photo"><img
+						src="./Fotos/158159ff2ad57ec2b033e7093d21551864746ceedafeac5524f0f8f934eb70b5.jpg" alt=""></div>
+				<div class="photo"><img
+						src="./Fotos/dac8caa807ae9aadc52a641bfeb2db3efbd72bdbb8154e8d55d458f1bcbe50b3.jpg" alt=""></div>
+				<div class="photo"><img
+						src="./Fotos/df126ae5a8095a08adca1cbe79c3c70c76b68364de18cf9d5178fda906cc5540.jpg" alt=""></div>
+				<div class="photo"><img
+						src="./Fotos/e3ffd7215649d50ed651793ddac76190ead15cc31bfa4af73608e4ba86a847ed.jpg" alt=""></div>
+				<!-- Dublierte Serie -->
+				<div class="photo"><img
+						src="./Fotos/158159ff2ad57ec2b033e7093d21551864746ceedafeac5524f0f8f934eb70b5.jpg" alt=""></div>
+				<div class="photo"><img
+						src="./Fotos/dac8caa807ae9aadc52a641bfeb2db3efbd72bdbb8154e8d55d458f1bcbe50b3.jpg" alt=""></div>
+				<div class="photo"><img
+						src="./Fotos/df126ae5a8095a08adca1cbe79c3c70c76b68364de18cf9d5178fda906cc5540.jpg" alt=""></div>
+				<div class="photo"><img
+						src="./Fotos/e3ffd7215649d50ed651793ddac76190ead15cc31bfa4af73608e4ba86a847ed.jpg" alt=""></div>
+			</div>
+		</div>
+
 	</div>
-	
-  </div>
 </body>
+
 </html>
