@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.treffamturm-eichlinghofen.de/sitemap.xml
+
+# Disallow access to system and configuration files
+Disallow: /docs/
+Disallow: /Fotos/
+
+# Allow all other pages
+Allow: /*.html$
+Allow: /*.pdf$
+Allow: /*.png$
+Allow: /*.svg$
+
+# Crawl-delay: 10  # Uncomment and adjust if needed to limit crawl rate
