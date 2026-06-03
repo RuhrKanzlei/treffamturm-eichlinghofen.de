@@ -484,15 +484,14 @@ select{
 			<div class='hero-inner'>
 				<nav aria-label='Hauptnavigation' class='topnav'>
 					<ul>
-						<li><a href='https://treffamturm-eichlinghofen.de/' rel='noopener noreferrer' target='_blank'>Startseite</a></li>
+						<li><a href='https://treffamturm-eichlinghofen.de/'>Startseite</a></li>
 						<li><a href='https://treffamturm-eichlinghofen.de/index.html#about'>Über uns</a></li>
 						<li><a href='https://blog.treffamturm-eichlinghofen.de/'>Veranstaltungen</a></li>
 						<li><a href='https://treffamturm-eichlinghofen.de/index.html#news'>Nachrichten</a></li>
 						<li><a href='https://treffamturm-eichlinghofen.de/index.html#donations'>Spenden</a></li>
-						<li><a href='https://treffamturm-eichlinghofen.de/docs.html' rel='noopener noreferrer' target='_blank'>Unterlagen</a></li>
-						<li><a href='https://treffamturm-eichlinghofen.de/Impressum.html' rel='noopener noreferrer' target='_blank'>Impressum</a></li>
-						<li><a href='https://treffamturm-eichlinghofen.de/DSE.html' rel='noopener noreferrer' target='_blank'>Datenschutz</a></li>
-		
+						<li><a href='https://treffamturm-eichlinghofen.de/docs.html'>Unterlagen</a></li>
+						<li><a href='https://treffamturm-eichlinghofen.de/Impressum.html'>Impressum</a></li>
+						<li><a href='https://treffamturm-eichlinghofen.de/DSE.html'>Datenschutz</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -1031,7 +1030,7 @@ select{
       <meta expr:content='data:post.url.canonical'/>
       <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
         <time class='published' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'>
-          <b:eval expr='data:post.date format "d. MMMM yyyy"'/>
+          <b:eval expr='data:post.date format &quot;d. MMMM yyyy&quot;'/>
         </time>
       </a>
     </b:if>
