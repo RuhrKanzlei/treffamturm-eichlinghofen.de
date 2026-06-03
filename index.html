@@ -17,7 +17,7 @@
 					<li><a href="./index.html">Startseite</a></li>
 					<li><a href="./index.html#about">Über uns</a></li>
 					<li><a href="https://blog.treffamturm-eichlinghofen.de/">Veranstaltungen</a></li>					
-					<li><a href="./index.html#newsletter">Newsletter</a></li>
+					<li><a href="./index.html#news">Nachrichten</a></li>
 					<li><a href="./index.html#donations">Spenden</a></li>
 					<li><a href="./docs.html">Unterlagen</a></li>
 					<li><a href="./Impressum.html">Impressum</a></li>
@@ -100,7 +100,7 @@
 			<li>Alle Einnahmen werden zu 100% für die Vereinsziele verwendet</li>
 		</ul>
 
-		<hr><h1 id="newsletter">Newsletter</h1>
+		<hr><h1 id="news">Nachrichten</h1>
 
 		<h2>Gemeinsam Eichlinghofen erleben</h2>
 		<p>Die St.-Margareta-Kirche und das Haus der Begegnung sind mehr als nur Gebäude – sie sind <b>Orte der Begegnung, Kultur und Gemeinschaft</b>. Hier finden regelmäßig Veranstaltungen statt, bei denen Dorfbewohner und Gäste zusammenkommen.</p>
@@ -115,6 +115,68 @@
 			<li>Vereinsnachrichten</li>
 			<li>Besondere Aktionen und Sonderaktionen</li>
 		</ul>
+
+		<hr><br>
+
+		<div id="last-post"></div>
+		<script>
+		function renderPost(data) {
+			var entries = data.feed.entry;
+			var container = document.getElementById("last-post");
+
+			// Nach Monat gruppieren
+			var groups = {};
+			var groupOrder = [];
+
+			for (var i = 0; i < entries.length; i++) {
+				var entry = entries[i];
+				var published = new Date(entry.published.$t);
+				var key = published.getFullYear() + '-' + String(published.getMonth() + 1).padStart(2, '0');
+				var label = published.toLocaleDateString('de-DE', { year: 'numeric', month: 'long' });
+
+				if (!groups[key]) {
+					groups[key] = { label: label, entries: [] };
+					groupOrder.push(key);
+				}
+
+				var link = '';
+				for (var j = 0; j < entry.link.length; j++) {
+					if (entry.link[j].rel === 'alternate') {
+						link = entry.link[j].href;
+						break;
+					}
+				}
+
+				groups[key].entries.push({ title: entry.title.$t, link: link });
+			}
+
+			// Neueste Monate zuerst
+			groupOrder.sort().reverse();
+
+			for (var m = 0; m < groupOrder.length; m++) {
+				var group = groups[groupOrder[m]];
+
+				var h3 = document.createElement('h3');
+				h3.textContent = group.label;
+				container.appendChild(h3);
+
+				var ul = document.createElement('ul');
+				for (var n = 0; n < group.entries.length; n++) {
+					var li = document.createElement('li');
+					var a = document.createElement('a');
+					a.href = group.entries[n].link;
+					a.textContent = group.entries[n].title;
+					a.target = '_blank';
+					a.rel = 'noopener';
+					li.appendChild(a);
+					ul.appendChild(li);
+				}
+				container.appendChild(ul);
+			}
+		}
+		</script>
+		<script src="https://blog.treffamturm-eichlinghofen.de/feeds/posts/default?max-results=10&alt=json-in-script&callback=renderPost"></script>
+
 
 		<hr><h1 id="donations">Spenden</h1>
 			<p><b>Unterstütze den Erhalt unseres Dorfzentrums</b></p>
