@@ -1031,7 +1031,7 @@ select{
       <meta expr:content='data:post.url.canonical'/>
       <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
         <time class='published' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'>
-          <data:post.date/>
+          <b:eval expr='data:post.date format "d. MMMM yyyy"'/>
         </time>
       </a>
     </b:if>
